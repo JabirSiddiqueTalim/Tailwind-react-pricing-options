@@ -1,24 +1,41 @@
-import { Menu } from 'lucide-react';
-import React from 'react';
+import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react';
+import Menus from './Menus';
 
 const Navbar = () => {
+  const [value, setvalue] = useState(false);
+  
   return (
     <div>
-      
+
       <div className='flex justify-between m-2'>
         <span className='flex justify-center '>
-        <Menu></Menu>
-        <h2 className='text-xl font-bold'>My Navbar</h2>
+          <span onClick={() => setvalue(!value)}>
+            {
+              value ? [<Menu></Menu> 
+              ,<Menus></Menus> ]
+                : <Menu className='md:hidden'></Menu>
+            }
+
+
+
+          </span>
+
+
+          <h2 className='text-xl font-bold ml-5'>My Navbar</h2>
 
         </span>
-        
-        <div className='flex gap-5'>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Contact</a>
-          <a href="">Settings</a>
 
-        </div>
+       
+          <div className='hidden lg:flex gap-5'>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+            <a href="">Settings</a>
+
+          </div>
+
+       
         <button className='btn btn-ghost text-l'>Sign in</button>
 
       </div>
