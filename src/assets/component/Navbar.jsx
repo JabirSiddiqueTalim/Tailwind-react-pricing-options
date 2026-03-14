@@ -13,7 +13,7 @@ const Navbar = () => {
           <span onClick={() => setvalue(!value)}>
             {
               value ? [<Menu></Menu> 
-              ,<Menus></Menus> ]
+              ,<Menus className={``}></Menus> ]
                 : <Menu className='md:hidden'></Menu>
             }
 
@@ -22,12 +22,12 @@ const Navbar = () => {
           </span>
 
 
-          <h2 className='text-xl font-bold ml-5'>My Navbar</h2>
+          <h2 className='text-xl font-bold ml-5 text-cyan-800'>My Navbar</h2>
 
         </span>
 
        
-          <div className='hidden lg:flex gap-5'>
+          <div className='hidden lg:flex gap-5  text-cyan-800'>
             <a href="">Home</a>
             <a href="">About</a>
             <a href="">Contact</a>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
 
        
-        <button className='btn btn-ghost text-l'>Sign in</button>
+        <button className='btn btn-ghost text-l  text-cyan-800'>Sign in</button>
 
       </div>
 

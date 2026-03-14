@@ -10,8 +10,8 @@ function App() {
     <>
     <Navbar></Navbar>
       
-      <DaisyuiNav></DaisyuiNav>
-      <h1 className='bg-red-500'>Vite + React</h1>
+      {/* <DaisyuiNav></DaisyuiNav> */}
+      {/* <h1 className='bg-red-500'>Vite + React</h1> */}
       {/* <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
