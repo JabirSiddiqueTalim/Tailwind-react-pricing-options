@@ -1,10 +1,14 @@
+import { Suspense } from 'react';
 import './App.css'
 import DaisyuiNav from './assets/component/DaisyuiNav'
 import Navbar from './assets/component/Navbar'
+import Pricingcard from './assets/component/pricingcard/Pricingcard';
 
 
 function App() {
+  const pricingPromise=fetch('/pricingData.json').then(res=>res.json());
 
+  // console.log(pricingPomise);
 
   return (
     <>
@@ -28,6 +32,12 @@ function App() {
           </div>
         </div>
       </div> */}
+      <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
+      <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
+
+      </Suspense>
+      
+
 
 
 
