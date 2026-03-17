@@ -5,7 +5,7 @@ const Feature = ({feature}) => {
   
   return (
     <div>
-       <p><CircleCheckBig />{feature}</p>
+       <p className='flex'><  CircleCheckBig  className='mr-2'/>{feature}</p>
      
       
     </div>
