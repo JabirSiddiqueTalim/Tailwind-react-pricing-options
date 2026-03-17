@@ -3,7 +3,7 @@ import React from 'react';
 const DaisyuiCard = ({price}) => {
   console.log(price)
   return (
-    <div>
+    <div className='w-10/12 flex justify-center'>
       {
         <div className="card w-100 h-100 bg-base-100 shadow-sm">
         <div className="card-body">

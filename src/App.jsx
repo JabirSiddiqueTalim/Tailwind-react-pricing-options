@@ -3,6 +3,7 @@ import './App.css'
 import DaisyuiNav from './assets/component/DaisyuiNav'
 import Navbar from './assets/component/Navbar'
 import Pricingcard from './assets/component/pricingcard/Pricingcard';
+import ResultChart from './assets/component/ResultChart/ResultChart';
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
       <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
 
       </Suspense>
+      <ResultChart></ResultChart>
       
 
 

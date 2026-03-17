@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import DaisyuiCard from './DaisyuiCard';
 import Price from './Price';
+import ResultChart from '../ResultChart/ResultChart';
 
 const Pricingcard = ({pricingPromise}) => {
   const pricing=use(pricingPromise);
@@ -17,8 +18,10 @@ const Pricingcard = ({pricingPromise}) => {
         
         pricing.map(price=>< DaisyuiCard price={price} key={price.id}></DaisyuiCard>)
       }
+      <ResultChart></ResultChart>
       
     </div>
+    
   );
 };
 
