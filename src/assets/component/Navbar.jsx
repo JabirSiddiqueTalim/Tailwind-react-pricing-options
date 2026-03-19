@@ -1,6 +1,6 @@
-import { Menu, X } from 'lucide-react';
 import React, { useState } from 'react';
 import Menus from './Menus';
+import { Menu, Sliders } from 'lucide-react';
 
 const Navbar = () => {
   const [value, setvalue] = useState(false);
@@ -14,18 +14,19 @@ const Navbar = () => {
             {
               value ? [<Menu></Menu> 
               ,<Menus className={``}></Menus> ]
-                : <Menu className='md:hidden'></Menu>
+                : <Menu className='md:hidden'></Menu> 
             }
 
 
 
           </span>
 
-
+          
           <h2 className='text-xl font-bold ml-5 text-cyan-800'>My Navbar</h2>
 
         </span>
 
+           
        
           <div className='hidden lg:flex gap-5  text-cyan-800'>
             <a href="">Home</a>

@@ -4,17 +4,18 @@ import DaisyuiNav from './assets/component/DaisyuiNav'
 import Navbar from './assets/component/Navbar'
 import Pricingcard from './assets/component/pricingcard/Pricingcard';
 import ResultChart from './assets/component/ResultChart/ResultChart';
+import { Bounce, Fade } from 'react-awesome-reveal';
 
 
 function App() {
-  const pricingPromise=fetch('/pricingData.json').then(res=>res.json());
+  const pricingPromise = fetch('/pricingData.json').then(res => res.json());
 
   // console.log(pricingPomise);
 
   return (
     <>
-    <Navbar></Navbar>
-      
+      <Navbar></Navbar>
+
       {/* <DaisyuiNav></DaisyuiNav> */}
       {/* <h1 className='bg-red-500'>Vite + React</h1> */}
       {/* <div className="hero bg-base-200 min-h-screen">
@@ -33,12 +34,32 @@ function App() {
           </div>
         </div>
       </div> */}
+      
+      
+      {/* <Fade 
+      delay={200} // Wait 200ms before starting
+      duration={1000} // Animation lasts 1 second
+      triggerOnce // Only animate once
+      fraction={0.5} // Start animation when element is 50% visible
+      >
       <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
-      <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
+        <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
 
       </Suspense>
-      <ResultChart></ResultChart>
-      
+      </Fade> */}
+      {/* <Bounce>
+      <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
+        <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
+
+      </Suspense>
+        
+      </Bounce> */}
+      <Suspense fallback={<span className="loading loading-dots loading-lg"></span>}>
+        <Pricingcard pricingPromise={pricingPromise}></Pricingcard>
+
+      </Suspense>
+
+
 
 
 
